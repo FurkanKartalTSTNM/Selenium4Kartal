@@ -19,3 +19,15 @@
 ========== SESSION START [a4e745c6d783026139b6e89c9c19cf86] ==========
 ========== SESSION END [a4e745c6d783026139b6e89c9c19cf86] ==========
 
+========== SESSION START [576daec2b308371f1a33ec54fc34597d] ==========
+========== SESSION END [576daec2b308371f1a33ec54fc34597d] ==========
+
+========== SESSION START [333b7cb40a462fd0447d2977a3199554] ==========
+[2025-10-21T19:04:45.598+03:00] [333b7cb40a462fd0447d2977a3199554] [BROWSER] [WARNING] https://www.amazon.com/ - [GroupMarkerNotSet(crbug.com/242999)!:A0802D003C610000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.
+[2025-10-21T19:04:45.598+03:00] [333b7cb40a462fd0447d2977a3199554] [BROWSER] [SEVERE] https://www.amazon.com/ah/ajax/counter?ctr=desktop_ajax_atf&exp=1706231031030&rId=Y8GWZ9DFBWW0TDN0Q47Z&mkId=ATVPDKIKX0DER&h=a0c786eac27b0a29276f484cfaa4ac4b354fd0a93e24591f633ec8c4b9adb4cf - Failed to load resource: the server responded with a status of 400 ()
+[2025-10-21T19:04:45.618+03:00] [333b7cb40a462fd0447d2977a3199554] [BROWSER] [SEVERE] https://images-na.ssl-images-amazon.com/images/I/31bJewCvY-L.js 3:388 "Error logged with the Track&Report JS errors API(http://tiny/1covqr6l8/wamazindeClieUserJava): {\"m\":\"gwAjax call failed {\\\"url\\\":\\\"/ah/ajax/counter?ctr=desktop_ajax_atf&exp=1706231031030&rId=Y8GWZ9DFBWW0TDN0Q47Z&mkId=ATVPDKIKX0DER&h=a0c786eac27b0a29276f484cfaa4ac4b354fd0a93e24591f633ec8c4b9adb4cf\\\"}\",\"csm\":\"v5 ueLogError callee\",\"logLevel\":\"WARN\",\"attribution\":\"gwAjax-ajaxATF\",\"pageURL\":\"https://www.amazon.com/\",\"s\":[\"function d(a,c,d){\\\"object\\\"===typeof h.ue&&\\\"function\\\"===typeof h.ue.count&&(m(l.errorCounter||\\\"gwAjaxError\\\"),l.id&&m(\\\"gwAjaxError:\\\"+l.id));\\\"function\\\"===typeof h.ueLogError&&h.ueLogError({logLevel:\\\"WARN\\\",attribution:\\\"gwAjax-\\\"+(l.id||f),\\nmessage:\\\"gwAjax call failed \\\"+(JSON&&JSON.stringify?JSON.stringify({url:f,\\\"params-data\\\":l.params||l.data}):\\\"\\\")});\\\"function\\\"===typeof b&&b(a,c,d)}\",\"function(){h.push(b||{attribution:e,name:c,logLevel:a});var d=f.apply(this,arguments);h.pop();return d}\",\"function(c,f){if(!e&&!b&&!d){f=f||[];d=1;try{for(;a[0];)a.shift().apply(c,f)}finally{b=[c,f],d=0}}return this}\",\"function d(a,b,d,m){if(2!==E){E=2;w&&clearTimeout(w);B=p;q=m||\\\"\\\";v.readyState=0\u003Ca?4:0;m=b;if(d){var n=e,r=v,u=n.contents,y=n.dataTypes,\\nP=n.responseFields,A,D;for(C in P)C in d&&(r[P[C]]=d[C]);for(;\\\"*\\\"===y[0];)y.shift(),A===p&&(A=n.mimeType||r.getResponseH\",\"function(d,g){var k;try{if(b&&(g||4===f.readyState))if(b=p,h&&(f.onreadystatechange=c.noop,wa&&delete U[h]),g)4!==f.readyState&&f.abort();else{var l=f.status;var q=f.getAllResponseHeaders();var r={};(k=f.responseXML)&&k.documentElement&&(r.xml=k);r.text=f.\"],\"t\":477}" Object
+========== SESSION END [333b7cb40a462fd0447d2977a3199554] ==========
+
+========== SESSION START [83fad721529b125e14a9182f89859171] ==========
+========== SESSION END [83fad721529b125e14a9182f89859171] ==========
+
