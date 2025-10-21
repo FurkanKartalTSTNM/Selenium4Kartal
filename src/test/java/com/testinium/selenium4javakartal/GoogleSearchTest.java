@@ -59,7 +59,7 @@ public class GoogleSearchTest {
         //String browserName = System.getenv("browser");
 
         // RemoteWebDriver yerine kendi TestiniumSeleniumDriver'ını options ile başlat
-        WebDriver driver = new TestiniumSeleniumDriver(new URL("http://172.25.1.110:4444/wd/hub"), options);
+        RemoteWebDriver driver = new TestiniumSeleniumDriver(new URL("http://172.25.1.110:4444/wd/hub"), options);
 
         driver.get("https://www.amazon.com");
         System.out.println("Page title: " + driver.getTitle());
