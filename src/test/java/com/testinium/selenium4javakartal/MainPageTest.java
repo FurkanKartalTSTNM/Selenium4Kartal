@@ -68,4 +68,36 @@ public class MainPageTest {
         assertTrue(productsList.isDisplayed());
         assertEquals("All Developer Tools and Products by JetBrains", driver.getTitle());
     }
+
+    @Test
+    public void pageTitleTest() {
+        assertEquals("JetBrains: Essential tools for software developers and teams", driver.getTitle());
+    }
+
+    @Test
+    public void searchAndNavigateToFirstResult() {
+        // Click search button
+        mainPage.searchButton.click();
+
+        // Enter "Selenium" in the search field
+        WebElement searchField = driver.findElement(By.cssSelector("[data-test='search-input']"));
+        searchField.sendKeys("Selenium");
+
+        // Click the search submit button
+        WebElement submitButton = driver.findElement(By.cssSelector("button[data-test='full-search-button']"));
+        submitButton.click();
+
+        // Wait for search results to appear
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        WebElement firstResult = driver.findElement(By.cssSelector("[data-test='search-result-title'] a"));
+        assertTrue(firstResult.isDisplayed());
+
+        // Click the first result
+        firstResult.click();
+
+        // Verify the new page title contains "Selenium"
+        assertTrue(driver.getTitle().contains("Selenium"));
+    }
+
+
 }
