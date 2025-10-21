@@ -10,25 +10,11 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.time.Duration;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 public class GoogleSearchTest {
     private RemoteWebDriver driver;
-
-    @BeforeEach
-    public void setUp() throws MalformedURLException {
-        ChromeOptions options = new ChromeOptions();
-        driver = new TestiniumSeleniumDriver(new URL("http://172.25.1.110:4444/wd/hub"),options);
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        driver.get("https://www.google.com/");
-    }
-
-    @AfterEach
-    public void tearDown() {
-        driver.quit();
-    }
 
 
     @Test
