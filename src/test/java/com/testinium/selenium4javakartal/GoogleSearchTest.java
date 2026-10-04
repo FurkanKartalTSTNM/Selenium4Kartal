@@ -37,22 +37,23 @@ public class GoogleSearchTest {
     }
 
     @Test
-    public void runDefaultTest2() throws MalformedURLException, InterruptedException {
-        ChromeOptions options =  new ChromeOptions();
-        // Testinium anahtarı gerekiyorsa Options üstünden ver:
+    public void runDefaultTest2() throws MalformedURLException {
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--disable-dev-shm-usage");
 
-        // İstersen browser'ı env'den oku
-        //String browserName = System.getenv("browser");
+        RemoteWebDriver driver = new TestiniumSeleniumDriver(
+                new URL("http://host.docker.internal:4444/wd/hub"),
+                options
+        );
 
-        // RemoteWebDriver yerine kendi TestiniumSeleniumDriver'ını options ile başlat
-        RemoteWebDriver driver = new TestiniumSeleniumDriver(new URL("http://host.docker.internal:4444/wd/hub"), options);
+        try {
+            driver.get("data:text/html,<title>SeleniumSmoke</title><h1 id='status'>OK</h1>");
 
-        driver.get("https://www.amazon.com");
-        System.out.println("Page title: " + driver.getTitle());
-        Thread.sleep(5000); // 3 saniye bekler
-
-
-        driver.quit();
+            assertEquals("SeleniumSmoke", driver.getTitle());
+            assertEquals("OK", driver.findElement(By.id("status")).getText());
+        } finally {
+            driver.quit();
+        }
     }
 
 }
